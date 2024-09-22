@@ -13,5 +13,7 @@ Route::get('/test', function () {
 });
 
 Route::get('/posts',[PostController::class,'index']);
-Route::post('/posts',[PostController::class,'store']);
+Route::post('/posts/store',[PostController::class,'store']);
 Route::get('/posts/{post}',[PostController::class,'show']);
+
+Route::put('/posts/{id}',[PostController::class,'update']); 
